@@ -21,4 +21,6 @@ LABEL org.opencontainers.image.url="https://github.com/Code-Vedas/gemstash/pkgs/
 
 WORKDIR /gemstash
 
+COPY config.yml /gemstash/config.yml
+
 CMD ["gemstash", "start", "--no-daemonize", "--config-file", "/gemstash/config.yml"]
