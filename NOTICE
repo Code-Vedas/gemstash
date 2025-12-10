@@ -1,0 +1,10 @@
+Gemstash Docker Image
+Copyright (c) 2025 Codevedas Inc.
+
+This repository contains build artifacts and Docker configuration
+for Gemstash, a private RubyGems server.
+
+Gemstash is licensed under the MIT License.
+Source: https://github.com/bundler/gemstash
+
+This project is not affiliated with or endorsed by the Gemstash project.
