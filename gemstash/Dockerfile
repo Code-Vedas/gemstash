@@ -1,7 +1,14 @@
-FROM ruby:3.4-alpine
+FROM ruby:3.4-slim
 
-RUN apk add --no-cache build-base sqlite-dev && \
-    gem install sqlite3 --platform ruby && \
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+      build-essential \
+      libsqlite3-dev \
+      pkg-config \
+      ca-certificates && \
+    rm -rf /var/lib/apt/lists/*
+
+RUN gem install sqlite3 && \
     gem install gemstash
 
 WORKDIR /gemstash
